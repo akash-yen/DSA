@@ -1,5 +1,5 @@
-# # l = [89, 46, 69, 11, 37,57,33,43,23,78,76,445]
-# l = [11,2,3,5,4]
+#l = [89, 46, 69, 11, 37,57,33,43,23,78,76,445]
+# l = [1,2,3,2,3,4,5]
 # index = 0
 # start = 0
 # while start < len(l)-1:
@@ -10,19 +10,35 @@
 #             l_min = i
 #             swap = index
 #         index = index+1
-#         l[start],l[swap] = l[swap],l[start]
+#         if l[start] != l_min:
+#             l[start],l[swap] = l[swap],l[start]
 #     start = start +1
-# print(swap)
 # print(l_min)
 # print(l)
 
-l = [1,2,3,7,4,8]
-str = 0
-min = l[str]
-while str < len(l)-1:
-    for i in l:
-        if i < min:
-            min = i
-    l[str] = min
+
+l = [4,1,3,2,3,5,4,6,7,5,6,12,33,4]
+l_sort = []
+start = 0
+min = l[start]
+while start <= len(l)-1:
+    min = l[start]
+    for i in range(len(l)):
+        if i < start:
+            pass
+        elif l[i] < min:
+            index = i
+            min = l[i]
+        else:
+            pass
+    if min == l[start]:
+        pass
+    else:
+        l[start],l[index] = l[index],l[start]
+    start = start+1
+print(l)
+
+
+
 
 
