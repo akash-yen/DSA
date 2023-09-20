@@ -95,22 +95,28 @@ l = [89, 46, 69, 1, 37, 80,88,88, 64, 82, 87, 75]
 ## Selection sort
 
 l = [89, 46, 69, 1, 37, 80,88,88, 64, 82, 87, 75]
-
+#
 def selection_sort(l):
+    l_sort = []
     start = 0
-    l_min = l[start]
-    index = start
+    min = l[start]
     while start <= len(l)-1:
-        for i in l[start:]:
-            if i < l_min:
-                l_min = i
-                index = start +1
-        l[start] , l[index] = l[index],l[start]
-        start = start +1
-        index = start
-    print(l)
-selection_sort(l)
-
+        min = l[start]
+        for i in range(len(l)):
+            if i < start:
+                pass
+            elif l[i] < min:
+                index = i
+                min = l[i]
+            else:
+                pass
+        if min == l[start]:
+            pass
+        else:
+            l[start],l[index] = l[index],l[start]
+        start = start+1
+    return l
+print(selection_sort(l))
 
 
 
