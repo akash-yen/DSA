@@ -36,5 +36,5 @@ def isPal_eff(n):
         ld = temp%10
         rev = rev*10 + ld
         temp = temp//10
-    return rev == n
+    return rev == n # this is a consise code 
 print(isPal_eff(101))
