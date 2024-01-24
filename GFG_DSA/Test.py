@@ -1,3 +1,3 @@
-isprime = [True] *10
-
-print(1%2)
+l = [1,2,43,534,32,21,1]
+x = sorted(l)
+print(x)
